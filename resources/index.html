@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge PDFs | Glassmorphism</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <main class="app-container glass-panel">
+        <header>
+            <h1>Merge PDFs</h1>
+            <p>Combine your documents securely in seconds.</p>
+        </header>
+
+        <div class="content-area" id="content-area">
+            
+            <div class="dropzones-container" id="dropzones-container">
+                <!-- Dropzone 1 -->
+                <div class="dropzone glass-panel-inner" id="dropzone-1">
+                    <div class="dropzone-content" id="content-1">
+                        <i class="fa-regular fa-file-pdf drop-icon"></i>
+                        <span class="file-name" id="file-name-1">Choose PDF 1<br><small>or drag here</small></span>
+                        <div class="success-indicator hidden"><i class="fa-solid fa-check"></i> Ready</div>
+                    </div>
+                </div>
+                
+                <!-- Dropzone 2 -->
+                <div class="dropzone glass-panel-inner" id="dropzone-2">
+                    <div class="dropzone-content" id="content-2">
+                        <i class="fa-regular fa-file-pdf drop-icon"></i>
+                        <span class="file-name" id="file-name-2">Choose PDF 2<br><small>or drag here</small></span>
+                        <div class="success-indicator hidden"><i class="fa-solid fa-check"></i> Ready</div>
+                    </div>
+                </div>
+                
+                <!-- Merging Indicator (Hidden initially) -->
+                <div class="merging-indicator hidden" id="merging-indicator">
+                    <div class="spinner"></div>
+                    <p>Merging...</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-container" id="action-container">
+                <button id="merge-btn" class="primary-btn glass-btn" disabled>
+                    <span>Merge PDFs</span>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </button>
+            </div>
+
+            <!-- Success State -->
+            <div class="success-state hidden" id="success-state">
+                <div class="success-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h2>Merge Complete!</h2>
+                <p>Your PDFs have been successfully combined.</p>
+                <div class="success-actions">
+                    <button id="start-over-btn" class="primary-btn glass-btn">
+                        <span>Start Over</span>
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Neutralino -->
+    <script src="neutralino.js"></script>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

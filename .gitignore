@@ -1,0 +1,24 @@
+# Neutralino Build Output
+dist/
+pdf-merger-windows/
+PDF-Merger-v1.0.zip
+*.zip
+
+# PyInstaller Build Output
+build/
+bin/
+*.spec
+
+# Python Caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Node Modules (if any were installed)
+node_modules/
+
+# OS/IDE Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
